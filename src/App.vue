@@ -1,28 +1,29 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div class="w-screen h-screen bg-gray-500">
+    <header class="bg-gradient-to-r from-green-400 to-blue-500 flex flex-row justify-between p-8 text-white font-bold">
+      <div class="container">
+        <a class="float-left cursor-pointer hover:text-red-400">WOD TRACKER</a>
+        <ul class="float-right flex flex-row space-x-6">
+          <li>
+            <router-link class="hover:text-red-400" to="/">CREATE WOD</router-link>
+          </li>
+          <li>
+            <router-link class="hover:text-red-400" to="/view">VIEW WODS</router-link>
+          </li>
+        </ul>
+      </div>
+    </header>
+    <main>
+      <router-view></router-view>
+    </main>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
   }
 }
 </script>
-
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>
